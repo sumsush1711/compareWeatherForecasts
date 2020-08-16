@@ -54,9 +54,13 @@ def main():
         print("One or both of the cities inputted are invalid. Please input a valid city name.")
 
 def compare_forecasts(city1, city2):
-
+    
+    #Input API Token
+    
+    API_TOKEN = '';
+    
     #HTTP Get Request for the first city's data for 5 days, and converting it to JSON format
-    GETRequestCity1 = 'https://api.openweathermap.org/data/2.5/forecast/daily?q={}&appid=fe9c5cddb7e01d747b4611c3fc9eaf2c&units=metric&cnt=5'.format(city1)
+    GETRequestCity1 = 'https://api.openweathermap.org/data/2.5/forecast/daily?q={}&appid={}&units=metric&cnt=5'.format(city1).format(API_TOKEN)
     ResponseCity1 = requests.get(GETRequestCity1)
     JSONResponseCity1 = ResponseCity1.json()
 
