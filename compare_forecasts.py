@@ -56,8 +56,7 @@ def main():
 def compare_forecasts(city1, city2):
     
     #Input API Token
-    
-    API_TOKEN = '';
+    API_TOKEN = ''
     
     #HTTP Get Request for the first city's data for 5 days, and converting it to JSON format
     GETRequestCity1 = 'https://api.openweathermap.org/data/2.5/forecast/daily?q={}&appid={}&units=metric&cnt=5'.format(city1).format(API_TOKEN)
